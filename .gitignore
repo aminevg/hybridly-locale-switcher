@@ -1,0 +1,10 @@
+.idea
+.vscode
+.phpunit.result.cache
+.DS_Store
+build
+vendor
+node_modules
+coverage
+dist
+types
