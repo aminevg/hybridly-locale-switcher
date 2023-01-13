@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b7e283f9951c5d669387d8a5bf5c9df",
+    "content-hash": "63b9909a6d712713766c729cca772733",
     "packages": [
         {
             "name": "brick/math",
@@ -609,6 +609,70 @@
                 }
             ],
             "time": "2022-07-30T15:56:11+00:00"
+        },
+        {
+            "name": "hybridly/laravel",
+            "version": "v0.0.1-alpha.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hybridly/laravel.git",
+                "reference": "1ab81080abead1f630c9e2a198a466ca997c127a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hybridly/laravel/zipball/1ab81080abead1f630c9e2a198a466ca997c127a",
+                "reference": "1ab81080abead1f630c9e2a198a466ca997c127a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.0",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hybridly\\HybridlyServiceProvider"
+                    ],
+                    "aliases": {
+                        "Hybridly": "Hybridly\\Facades\\Hybridly"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hybridly\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Enzo Innocenzi",
+                    "email": "enzo@innocenzi.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Server-driven, client-rendered application.",
+            "homepage": "https://github.com/hybridly/hybridly",
+            "keywords": [
+                "hybridly",
+                "inertiajs",
+                "laravel",
+                "vite",
+                "vuejs"
+            ],
+            "support": {
+                "issues": "https://github.com/hybridly/hybridly/issues",
+                "source": "https://github.com/hybridly/hybridly"
+            },
+            "time": "2023-01-12T12:12:36+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8475,7 +8539,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "hybridly/laravel": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
