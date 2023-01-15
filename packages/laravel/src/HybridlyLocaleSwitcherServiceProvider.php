@@ -20,4 +20,13 @@ class HybridlyLocaleSwitcherServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasCommand(HybridlyLocaleSwitcherCommand::class);
     }
+
+    public function registeringPackage(): void
+    {
+        $this->app->singleton(HybridlyLocaleSwitcher::class);
+        $this->app->bind(
+            'hybridly_locale_switcher.store',
+            config('hybridly-locale-switcher.store'),
+        );
+    }
 }

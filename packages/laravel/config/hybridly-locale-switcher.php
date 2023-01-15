@@ -1,6 +1,7 @@
 <?php
 
 // config for Aminevg/HybridlyLocaleSwitcher
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -10,7 +11,10 @@ return [
     | This option defines which locale store to use.
     */
 
-    'store' => env('HYBRIDLY_LOCALE_SWITCHER_STORE', 'session'),
+    'store' => env(
+        'HYBRIDLY_LOCALE_SWITCHER_STORE',
+        \Aminevg\HybridlyLocaleSwitcher\Stores\SessionStore::class,
+    ),
 
     /*
     |--------------------------------------------------------------------------

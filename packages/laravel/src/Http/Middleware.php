@@ -15,9 +15,7 @@ class Middleware
             return $next($request);
         }
 
-        /** @var string */
-        $locale = session()->remember(
-            config('hybridly-locale-switcher.session.session_key'),
+        $locale = hybridly_locale_store()->remember(
             fn () => hybridly_locale_switcher()->getPreferredLocale($request),
         );
         app()->setLocale($locale);
