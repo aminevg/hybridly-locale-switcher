@@ -8,11 +8,6 @@ class HybridlyLocaleSwitcher
 {
     public function persistLocale(string $locale): void
     {
-        if (config('hybridly-locale-switcher.store') !== 'session') {
-            // No support for stores other than session for now
-            return;
-        }
-
         hybridly_locale_store()->put($locale);
     }
 

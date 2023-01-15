@@ -5,7 +5,6 @@ namespace Aminevg\HybridlyLocaleSwitcher\Stores;
 use Aminevg\HybridlyLocaleSwitcher\Contracts\LocaleStore;
 use Closure;
 use Illuminate\Session\Store as SessionStoreClass;
-use Illuminate\Support\Str;
 
 class SessionStore implements LocaleStore
 {
