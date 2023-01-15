@@ -13,7 +13,7 @@ class HybridlyLocaleSwitcher
             return;
         }
 
-        session()->put(config('hybridly-locale-switcher.session.session_key'), $locale);
+        hybridly_locale_store()->put($locale);
     }
 
     /**
