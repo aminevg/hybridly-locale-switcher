@@ -2,7 +2,7 @@ import { Composer, I18n, VueI18n } from "@intlify/vue-i18n-core";
 import { definePlugin } from "@hybridly/core";
 import { useTypedProperty } from "@hybridly/vue";
 
-export function hybridlyLocaleSwitcher(i18nInstance: I18n) {
+export function hybridlyLocaleSwitcher(options: HybridlyLocaleSwitcherOptions) {
   return definePlugin({
     name: "hybridly-locale-switcher:set-locale",
     navigated() {
@@ -10,11 +10,15 @@ export function hybridlyLocaleSwitcher(i18nInstance: I18n) {
         "hybridlyLocaleSwitcher.currentLocale"
       );
 
-      if (i18nInstance.mode === "legacy") {
-        (i18nInstance.global as VueI18n).locale = currentLocale.value;
+      if (options.i18nInstance.mode === "legacy") {
+        (options.i18nInstance.global as VueI18n).locale = currentLocale.value;
       } else {
-        (i18nInstance.global as Composer).locale.value = currentLocale.value;
+        (options.i18nInstance.global as Composer).locale.value = currentLocale.value;
       }
     },
   });
+}
+
+interface HybridlyLocaleSwitcherOptions {
+  i18nInstance: I18n
 }
