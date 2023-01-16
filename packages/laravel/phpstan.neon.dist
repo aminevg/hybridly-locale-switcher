@@ -1,14 +1,11 @@
 includes:
-    - phpstan-baseline.neon
+  - phpstan-baseline.neon
 
 parameters:
-    level: 4
-    paths:
-        - src
-        - config
-        - database
-    tmpDir: build/phpstan
-    checkOctaneCompatibility: true
-    checkModelProperties: true
-    checkMissingIterableValueType: false
-
+  level: 9
+  paths:
+      - src
+      - config
+  tmpDir: build/phpstan
+  checkOctaneCompatibility: true
+  checkModelProperties: true

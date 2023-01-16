@@ -5,14 +5,15 @@ namespace Aminevg\HybridlyLocaleSwitcher\Stores;
 use Aminevg\HybridlyLocaleSwitcher\Contracts\LocaleStore;
 use Closure;
 use Illuminate\Session\Store as SessionStoreClass;
+use Illuminate\Session\SessionManager;
 
 class SessionStore implements LocaleStore
 {
-    protected SessionStoreClass $session;
+    protected SessionStoreClass|SessionManager $session;
 
     protected string $session_key;
 
-    public function __construct(SessionStoreClass $session = null)
+    public function __construct(SessionStoreClass|SessionManager $session = null)
     {
         $this->session = $session ?? session();
 

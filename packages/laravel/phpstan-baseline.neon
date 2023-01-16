@@ -1,0 +1,26 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Hybridly\\\\Hybridly\\|Hybridly\\\\View\\\\Factory\\:\\:share\\(\\)\\.$#"
+			count: 1
+			path: src/Http/Middleware.php
+
+		-
+			message: "#^Parameter \\#1 \\$directory of function scandir expects string, mixed given\\.$#"
+			count: 1
+			path: src/HybridlyLocaleSwitcher.php
+
+		-
+			message: "#^Parameter \\#2 \\$concrete of method Illuminate\\\\Contracts\\\\Container\\\\Container\\:\\:bind\\(\\) expects Closure\\|string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/HybridlyLocaleSwitcherServiceProvider.php
+
+		-
+			message: "#^Method Aminevg\\\\HybridlyLocaleSwitcher\\\\Stores\\\\SessionStore\\:\\:remember\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Stores/SessionStore.php
+
+		-
+			message: "#^Property Aminevg\\\\HybridlyLocaleSwitcher\\\\Stores\\\\SessionStore\\:\\:\\$session_key \\(string\\) does not accept mixed\\.$#"
+			count: 1
+			path: src/Stores/SessionStore.php
