@@ -18,6 +18,7 @@ class HybridlyLocaleSwitcherServiceProvider extends PackageServiceProvider
         $package
             ->name('hybridly-locale-switcher')
             ->hasConfigFile()
+            ->hasMigration('create_user_locales_table')
             ->hasCommand(HybridlyLocaleSwitcherCommand::class);
     }
 
