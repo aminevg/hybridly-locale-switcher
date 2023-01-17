@@ -24,7 +24,7 @@ beforeEach(function () {
     ]));
 });
 
-it('sets the locale ', function () {
+it('sets the locale', function () {
     withHeader('Accept-Language', 'ja')->get('/');
 
     /** @var Expectation<string> */

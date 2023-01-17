@@ -16,7 +16,7 @@ beforeEach(function () {
     config(['app.locale' => 'testLocale']);
 });
 
-it('sets the locale ', function () {
+it('sets the locale', function () {
     withHeader('Accept-Language', 'ja')->get('/');
 
     /** @var Expectation<string> */
