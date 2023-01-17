@@ -1,7 +1,6 @@
 <?php
 
 use Aminevg\HybridlyLocaleSwitcher\Http\Middleware;
-use Aminevg\HybridlyLocaleSwitcher\Models\UserLocale;
 use Aminevg\HybridlyLocaleSwitcher\Tests\User;
 use Illuminate\Support\Facades\Route;
 use Aminevg\HybridlyLocaleSwitcher\Tests\UsesDatabaseStore;
