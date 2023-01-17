@@ -3,6 +3,7 @@
 use Aminevg\HybridlyLocaleSwitcher\Http\Middleware;
 use Illuminate\Support\Facades\Route;
 use Aminevg\HybridlyLocaleSwitcher\Tests\UsesSessionStore;
+use Pest\Expectation;
 
 use function Pest\Laravel\withHeader;
 
@@ -17,11 +18,17 @@ beforeEach(function () {
 
 it('sets the locale ', function () {
     withHeader('Accept-Language', 'ja')->get('/');
-    expect(app()->getLocale())->toBe('ja');
+
+    /** @var Expectation<string> */
+    $expect = expect(app()->getLocale());
+    $expect->toBe('ja');
 });
 
 it('remembers the locale once set', function () {
     withHeader('Accept-Language', 'en')->get('/');
     withHeader('Accept-Language', 'ja')->get('/');
-    expect(app()->getLocale())->toBe('en');
+
+    /** @var Expectation<string> */
+    $expect = expect(app()->getLocale());
+    $expect->toBe('en');
 });
