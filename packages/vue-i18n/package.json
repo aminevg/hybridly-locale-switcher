@@ -36,8 +36,7 @@
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.0.1",
     "typescript": "^4.9.4",
-    "unbuild": "^1.0.2",
-    "vitest": "^0.27.1"
+    "unbuild": "^1.0.2"
   },
   "dependencies": {
     "hybridly": "0.0.1-alpha.18",

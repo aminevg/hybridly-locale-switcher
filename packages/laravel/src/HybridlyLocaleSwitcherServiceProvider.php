@@ -4,7 +4,6 @@ namespace Aminevg\HybridlyLocaleSwitcher;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Aminevg\HybridlyLocaleSwitcher\Commands\HybridlyLocaleSwitcherCommand;
 use Aminevg\HybridlyLocaleSwitcher\Stores\DatabaseStore;
 use Aminevg\HybridlyLocaleSwitcher\Stores\SessionStore;
 use Exception;
@@ -21,8 +20,7 @@ class HybridlyLocaleSwitcherServiceProvider extends PackageServiceProvider
         $package
             ->name('hybridly-locale-switcher')
             ->hasConfigFile()
-            ->hasMigration('create_user_locales_table')
-            ->hasCommand(HybridlyLocaleSwitcherCommand::class);
+            ->hasMigration('create_user_locales_table');
     }
 
     public function registeringPackage(): void
