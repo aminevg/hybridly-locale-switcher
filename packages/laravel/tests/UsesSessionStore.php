@@ -15,9 +15,9 @@ trait UsesSessionStore
      */
     protected function getPackageProviders($app)
     {
-        $app['config']->set('hybridly-locale-switcher', [
-            'store' => SessionStore::class,
-            'session' => ['session_key' => 'hybridly_locale_switcher_session_key'],
+        $app['config']->set([
+            'hybridly-locale-switcher.store' => SessionStore::class,
+            'hybridly-locale-switcher.session.session_key' => 'hybridly_locale_switcher_session_key',
         ]);
         return [
             HybridlyLocaleSwitcherServiceProvider::class,

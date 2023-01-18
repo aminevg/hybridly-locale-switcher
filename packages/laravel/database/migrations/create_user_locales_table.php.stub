@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         /** @var string */
-        $table_name = config('hybridly_locale_switcher.database.table_name');
+        $table_name = config('hybridly-locale-switcher.database.table_name');
 
         if (empty($table_name)) {
             throw new Exception('Error: config/hybridly-locale-switcher.php not loaded. Run [php artisan config:clear] and try again.');

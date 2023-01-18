@@ -15,9 +15,7 @@ trait UsesDatabaseStore
      */
     protected function getPackageProviders($app)
     {
-        $app['config']->set('hybridly-locale-switcher', [
-            'store' => DatabaseStore::class,
-        ]);
+        $app['config']->set('hybridly-locale-switcher.store', DatabaseStore::class);
         return [
             HybridlyLocaleSwitcherServiceProvider::class,
         ];
