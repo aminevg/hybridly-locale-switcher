@@ -25,7 +25,7 @@ return [
     */
 
     'session' => [
-        'session_key' => env('HYBRIDLY_LOCALE_SWTICHER_SESSION_KEY', 'hybridly_locale_switcher_session_key'),
+        'session_key' => env('HYBRIDLY_LOCALE_SWITCHER_SESSION_KEY', 'hybridly_locale_switcher_session_key'),
     ],
 
     /*
@@ -37,6 +37,6 @@ return [
     */
 
     'database' => [
-        'table_name' => env('HYBRIDLY_LOCALE_SWTICHER_TABLE_NAME', 'user_locales'),
+        'table_name' => env('HYBRIDLY_LOCALE_SWITCHER_TABLE_NAME', 'user_locales'),
     ],
 ];
