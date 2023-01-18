@@ -11,10 +11,7 @@ return [
     | This option defines which locale store to use.
     */
 
-    'store' => env(
-        'HYBRIDLY_LOCALE_SWITCHER_STORE',
-        \Aminevg\HybridlyLocaleSwitcher\Stores\SessionStore::class,
-    ),
+    'store' => env('HYBRIDLY_LOCALE_SWITCHER_STORE', 'session'),
 
     /*
     |--------------------------------------------------------------------------

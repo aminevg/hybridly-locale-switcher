@@ -5,6 +5,9 @@ namespace Aminevg\HybridlyLocaleSwitcher;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Aminevg\HybridlyLocaleSwitcher\Commands\HybridlyLocaleSwitcherCommand;
+use Aminevg\HybridlyLocaleSwitcher\Stores\DatabaseStore;
+use Aminevg\HybridlyLocaleSwitcher\Stores\SessionStore;
+use Exception;
 
 class HybridlyLocaleSwitcherServiceProvider extends PackageServiceProvider
 {
@@ -25,9 +28,23 @@ class HybridlyLocaleSwitcherServiceProvider extends PackageServiceProvider
     public function registeringPackage(): void
     {
         $this->app->singleton(HybridlyLocaleSwitcher::class);
-        $this->app->bind(
+
+        $this->app->singleton(
             'hybridly_locale_switcher.store',
-            config('hybridly-locale-switcher.store'),
+            fn ($container) => $container->build($this->getStoreClass())
         );
+    }
+
+    private function getStoreClass(): string
+    {
+        /** @var string|null */
+        $store = config('hybridly-locale-switcher.store');
+        if ($store === 'session') {
+            return SessionStore::class;
+        }
+        if ($store === 'database') {
+            return DatabaseStore::class;
+        }
+        throw new Exception("Store [$store] not supported.");
     }
 }
