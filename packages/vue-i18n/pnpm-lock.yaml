@@ -1,24 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@hybridly/core': 0.0.1-alpha.18
-  '@hybridly/vue': 0.0.1-alpha.18
-  '@intlify/vue-i18n-core': ^9.2.2
   '@typescript-eslint/eslint-plugin': ^5.48.1
   '@typescript-eslint/parser': ^5.48.1
   axios: ^1.2.2
   eslint: ^8.0.1
+  hybridly: 0.0.1-alpha.18
   typescript: ^4.9.4
   unbuild: ^1.0.2
   vitest: ^0.27.1
   vue: ^3.0.0
+  vue-i18n: ^9.2.2
 
 dependencies:
-  '@hybridly/core': 0.0.1-alpha.18_axios@1.2.2
-  '@hybridly/vue': 0.0.1-alpha.18_axios@1.2.2+vue@3.2.45
-  '@intlify/vue-i18n-core': 9.2.2_vue@3.2.45
   axios: 1.2.2
+  hybridly: 0.0.1-alpha.18_axios@1.2.2+vue@3.2.45
   vue: 3.2.45
+  vue-i18n: 9.2.2_vue@3.2.45
 
 devDependencies:
   '@typescript-eslint/eslint-plugin': 5.48.1_3jon24igvnqaqexgwtxk6nkpse
@@ -518,6 +516,19 @@ packages:
       - supports-color
     dev: false
 
+  /@hybridly/vite/0.0.1-alpha.18_axios@1.2.2+vue@3.2.45:
+    resolution: {integrity: sha512-ACflZDbzS5wpP2/OAM+0e/H7GuZHoI9wm7vGxSLSuzqZmPwi6pr+2KA91o9enRgaWvzs7Akuleu19gqIWSO3eA==}
+    peerDependencies:
+      vue: ^3.2.45
+    dependencies:
+      '@hybridly/core': 0.0.1-alpha.18_axios@1.2.2
+      throttle-debounce: 5.0.0
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - axios
+      - supports-color
+    dev: false
+
   /@hybridly/vue/0.0.1-alpha.18_axios@1.2.2+vue@3.2.45:
     resolution: {integrity: sha512-8X7FnpYSNvkUw3J/9yCsyFWyTb5vZTwZ/Ll4ICiC/RjVw/yl8ZHnlzhss8xyhqTUy4i7/fr0EL/sX7CRZXGOeg==}
     peerDependencies:
@@ -573,19 +584,6 @@ packages:
     dependencies:
       '@intlify/core-base': 9.2.2
       '@intlify/shared': 9.2.2
-    dev: false
-
-  /@intlify/vue-i18n-core/9.2.2_vue@3.2.45:
-    resolution: {integrity: sha512-chkEVVrU4Lz3uAdaKiC20RI9rHEzS1JYHBIMPZJpNjQFPx20UYh9HaELCtjtI+P26aSS0KVOwFkIGGV7sIzgwA==}
-    engines: {node: '>= 14'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@intlify/core-base': 9.2.2
-      '@intlify/shared': 9.2.2
-      '@intlify/vue-devtools': 9.2.2
-      '@vue/devtools-api': 6.4.5
-      vue: 3.2.45
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
@@ -1878,6 +1876,18 @@ packages:
     resolution: {integrity: sha512-6rOvaUiNKy9lET1X0ECnyZ5O5kSV0PJbtA5yZUgdEF7fGJEVwSLSislltyt7nFwVVALYHQJtfGeAR2Y0A0uJkg==}
     dev: true
 
+  /hybridly/0.0.1-alpha.18_axios@1.2.2+vue@3.2.45:
+    resolution: {integrity: sha512-tEAXY+W0oCOnltvm30003vDZ3pANtohTg5Au7srt53rA5MEq8WiyvHz5PPJyl79EOkVxqKTI7CeKolUFczBVzQ==}
+    dependencies:
+      '@hybridly/core': 0.0.1-alpha.18_axios@1.2.2
+      '@hybridly/vite': 0.0.1-alpha.18_axios@1.2.2+vue@3.2.45
+      '@hybridly/vue': 0.0.1-alpha.18_axios@1.2.2+vue@3.2.45
+    transitivePeerDependencies:
+      - axios
+      - supports-color
+      - vue
+    dev: false
+
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
@@ -2484,6 +2494,11 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
 
+  /throttle-debounce/5.0.0:
+    resolution: {integrity: sha512-2iQTSgkkc1Zyk0MeVrt/3BvuOXYPl/R8Z0U2xxo9rjwNciaHDG3R+Lm6dh4EeUci49DanvBnuqI6jshoQQRGEg==}
+    engines: {node: '>=12.22'}
+    dev: false
+
   /tinybench/2.3.1:
     resolution: {integrity: sha512-hGYWYBMPr7p4g5IarQE7XhlyWveh1EKhy4wUBS1LrHXCKYgvz+4/jCqgmJqZxxldesn05vccrtME2RLLZNW7iA==}
     dev: true
@@ -2724,6 +2739,19 @@ packages:
       - supports-color
       - terser
     dev: true
+
+  /vue-i18n/9.2.2_vue@3.2.45:
+    resolution: {integrity: sha512-yswpwtj89rTBhegUAv9Mu37LNznyu3NpyLQmozF3i1hYOhwpG8RjcjIFIIfnu+2MDZJGSZPXaKWvnQA71Yv9TQ==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': 9.2.2
+      '@intlify/shared': 9.2.2
+      '@intlify/vue-devtools': 9.2.2
+      '@vue/devtools-api': 6.4.5
+      vue: 3.2.45
+    dev: false
 
   /vue/3.2.45:
     resolution: {integrity: sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA==}
