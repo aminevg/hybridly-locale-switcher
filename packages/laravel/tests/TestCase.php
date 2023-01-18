@@ -24,5 +24,10 @@ class TestCase extends Orchestra
         $app['config']->set('hybridly', [
             'i18n' => ['lang_path' => 'tests/lang']
         ]);
+        $app['config']->set('hybridly_locale_switcher', [
+            'database' => [
+                'table_name' => 'user_locales',
+            ],
+        ]);
     }
 }

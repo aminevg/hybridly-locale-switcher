@@ -16,6 +16,11 @@ parameters:
 			path: src/HybridlyLocaleSwitcherServiceProvider.php
 
 		-
+			message: "#^Method Aminevg\\\\HybridlyLocaleSwitcher\\\\Models\\\\UserLocale\\:\\:getTable\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Models/UserLocale.php
+
+		-
 			message: "#^Method Aminevg\\\\HybridlyLocaleSwitcher\\\\Stores\\\\SessionStore\\:\\:remember\\(\\) should return string but returns mixed\\.$#"
 			count: 1
 			path: src/Stores/SessionStore.php
